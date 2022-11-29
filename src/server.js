@@ -5,6 +5,7 @@ const express = require('express');
 const cors = require('cors');
 const PORT = process.env.PORT || 3002;
 const logger = require('./middleware/logger');
+const validator = require('./middleware/validator');
 const notFound = require('./handlers/404');
 const errorHandler = require('./handlers/500');
 
@@ -27,12 +28,12 @@ app.get('/', (req, res, next) => {
 });
 
 // app.get('helloQuery', validator, (req, res, next) => {
-app.get('/helloQuery', (req, res, next) => {
+app.get('/person', (req, res, next) => {
   res.status(200).send(`Hello ${req.query.name}`);
 });
 
-app.get('/helloPath/:individual', (req, res, next) => {
-  res.status(200).send(`Hello ${req.params.individual}`);
+app.get('/person/:name', (req, res, next) => {
+  res.status(200).send(`"Name": "${req.params.name}"`);
 });
 
 

@@ -2,7 +2,15 @@
 
 
 
+module.exports = (req, res, next) => {
+  // check query string for a *name* property
+  // '/person' includes ${req.query.name}
+  req.query.name = '';
 
+  console.log('Hello', req.query.name);
+  //sends the request through when valid, forces an error when not
+  next();
+};
 
 
 
