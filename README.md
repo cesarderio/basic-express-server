@@ -8,7 +8,9 @@ Create a basic express server
 
 ### Problem Domain
 
-Create a web server and utilize CI and CD and get practice in the general process of building and deploying servers, and prepping work for grading
+Create a web server and utilize CI and CD and get practice in the general process of building and deploying servers, and prepping work for grading.
+
+Dynamic API Phase 1: Build your core, standards compliant Express server
 
 ### Links and Resources
 
