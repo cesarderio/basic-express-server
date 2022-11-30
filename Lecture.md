@@ -7,8 +7,8 @@
 
 ## Terminology
 
-- Query Parameter: `/helloQuery?name=Raphael` -> `req.query.name`
-- Path (URL) Parameter: `/helloPath/Lucky`
+- Query Parameter: `/person?name=Raphael` -> `req.query.name`
+- Path (URL) Parameter: `/person/name`
 
 <!--
 ```js
