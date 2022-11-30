@@ -1,13 +1,16 @@
 // 'use strict';
 
+module.exports = (req, res, next) => {
+  // check query string for a *name* property
+  // '/person' includes ${req.query.name}
+  if (req.query.name) {
+    next();
+  } else {
+    next('query name required');
+  }
 
 
-
-
-
-
-
-
+};
 
 //jsdoc example
 // /**
