@@ -22,16 +22,16 @@ describe('APIServer', () => {
     expect(response.body.route).toEqual('/bad');
   });
 
-  it('works with query params and the "/helloQuery" route', async () => {
-    const response = await request.get('/helloQuery?name=Raphael');
+  it('works with query params and the "/person" route', async () => {
+    const response = await request.get('/person?name=Raphael');
 
     expect(response.text).toEqual('Hello Raphael');
   });
 
-  it('works with path params and the "/helloPath" route', async () => {
-    const response = await request.get('/helloPath/Lucky');
+  it('works with path params and the "/person" route', async () => {
+    const response = await request.get('/person/name');
 
-    expect(response.text).toEqual('Hello Lucky');
+    expect(response.text).toEqual(`"Name": "name"`);
   });
 
 });
